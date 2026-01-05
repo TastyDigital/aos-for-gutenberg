@@ -5,10 +5,10 @@
  * Description: Animate Gutenberg Blocks on scroll with Count Up
  * Version: 2.0.0
  * Author: Bastian Fießinger & Toby Trembath
- * Author URI: https://github.com/bfiessinger/
+ * Author URI: https://github.com/tastydigital/
  */
 
-namespace bf\gutenberg\aos;
+namespace td\gutenberg\aos;
 
 class aos {
 
