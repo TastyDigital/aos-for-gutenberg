@@ -6,7 +6,9 @@ function ensureNumber(n) {
     return (typeof n === 'number' && !isNaN(n));
 }
 
-    AOS.init();
+    AOS.init({
+        offset: 0,  // Trigger earlier - when element is 50px into viewport
+    });
     const countuppers = [];
     let counter = 0;
 
