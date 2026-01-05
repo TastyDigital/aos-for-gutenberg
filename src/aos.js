@@ -10,9 +10,13 @@ function ensureNumber(n) {
         offset: 0,
     });
 
-    // Recalculate positions after everything is fully loaded
+    // Recalculate positions after everything is fully loaded and painted
     window.addEventListener('load', () => {
-        AOS.refresh();
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                AOS.refresh();
+            });
+        });
     });
     const countuppers = [];
     let counter = 0;
