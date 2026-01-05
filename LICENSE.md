@@ -7,7 +7,7 @@ This WordPress plugin is licensed under the GNU General Public License v2.0 or l
 ### Copyright
 
 Copyright (C) 2020 Bastian Fießinger - Original plugin
-Copyright (C) 2025 TastyDigital - Modifications and continued maintenance
+Copyright (C) 2023 TastyDigital - Modifications and continued maintenance
 
 ### Third-Party Libraries
 
