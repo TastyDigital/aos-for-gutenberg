@@ -25,5 +25,8 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "countup.js": "^2.4.2"
+  },
+  "volta": {
+    "node": "19.9.0"
   }
 }
