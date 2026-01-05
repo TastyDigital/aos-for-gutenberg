@@ -7,7 +7,12 @@ function ensureNumber(n) {
 }
 
     AOS.init({
-        offset: 0,  // Trigger earlier - when element is 50px into viewport
+        offset: 0,
+    });
+
+    // Recalculate positions after everything is fully loaded
+    window.addEventListener('load', () => {
+        AOS.refresh();
     });
     const countuppers = [];
     let counter = 0;
