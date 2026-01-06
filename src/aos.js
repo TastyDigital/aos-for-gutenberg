@@ -6,9 +6,7 @@ function ensureNumber(n) {
     return (typeof n === 'number' && !isNaN(n));
 }
 
-    AOS.init({
-        offset: 0,
-    });
+    AOS.init({offset: 50});
 
     // Recalculate positions when layout changes (handles lazy loading, fonts, etc.)
     window.addEventListener('load', () => {
