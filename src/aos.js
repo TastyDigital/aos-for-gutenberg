@@ -10,13 +10,23 @@ function ensureNumber(n) {
         offset: 0,
     });
 
-    // Recalculate positions after everything is fully loaded and painted
+    // Recalculate positions when layout changes (handles lazy loading, fonts, etc.)
     window.addEventListener('load', () => {
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
+        let refreshTimeout;
+        const resizeObserver = new ResizeObserver(() => {
+            clearTimeout(refreshTimeout);
+            refreshTimeout = setTimeout(() => {
                 AOS.refresh();
-            });
+            }, 150);
         });
+
+        resizeObserver.observe(document.body);
+
+        // Stop observing after page has settled
+        setTimeout(() => {
+            resizeObserver.disconnect();
+            AOS.refresh();
+        }, 5000);
     });
     const countuppers = [];
     let counter = 0;
